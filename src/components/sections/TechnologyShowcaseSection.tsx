@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Server, Database, Code, Cloud, ShieldCheck, GitBranchPlus, CoffeeIcon, Coffee, Globe } from 'lucide-react';
+import { Server, Database, Code, Cloud, ShieldCheck, Coffee, Globe } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface TechExpertise {
@@ -19,13 +19,17 @@ const technologies: TechExpertise[] = [
 ];
 
 const TechCard = ({ icon: Icon, name, category }: TechExpertise) => (
-  <Card className="transform transition-all duration-300 hover:shadow-lg hover:border-primary/50">
-    <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-      <CardTitle className="text-md font-medium">{name}</CardTitle>
-      <Icon className="h-5 w-5 text-muted-foreground" />
+  <Card className="transform transition-all duration-300 hover:shadow-lg hover:border-primary/50 h-full flex flex-col">
+    <CardHeader className="flex flex-row items-start gap-4 pb-4">
+      <div className="bg-primary/10 p-3 rounded-full mt-1">
+        <Icon className="h-6 w-6 text-primary" />
+      </div>
+      <div className="flex-grow">
+        <CardTitle className="text-xl font-semibold text-foreground leading-tight">{name}</CardTitle> {/* Adjusted title style */}
+      </div>
     </CardHeader>
-    <CardContent>
-      <div className="text-xs text-muted-foreground">{category}</div>
+    <CardContent className="pt-0 flex-grow">
+      <p className="text-sm text-muted-foreground">{category}</p>
     </CardContent>
   </Card>
 );
@@ -41,7 +45,7 @@ export default function TechnologyShowcaseSection() {
             Leveraging a wide array of modern technologies to build exceptional software.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> {/* Increased gap slightly */}
           {technologies.map((tech) => (
             <TechCard key={tech.name} {...tech} />
           ))}
