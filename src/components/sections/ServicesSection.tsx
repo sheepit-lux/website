@@ -61,9 +61,11 @@ export default function ServicesSection() {
             We provide specialized services to help your business thrive in the digital landscape.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-y-8 md:flex md:flex-wrap md:justify-center md:gap-8">
           {services.map((service) => (
-            <ServiceCard key={service.title} {...service} />
+            <div key={service.title} className="w-full md:w-[calc(50%-1rem)]"> {/* 1rem is half of gap-8 (2rem) */}
+              <ServiceCard {...service} />
+            </div>
           ))}
         </div>
       </div>
