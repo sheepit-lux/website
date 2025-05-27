@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Architecture, UsersRound, Workflow, Globe } from 'lucide-react';
+import { Building2, UsersRound, Workflow, Globe } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface Service {
@@ -11,7 +11,7 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: Architecture,
+    icon: Building2,
     title: 'Enterprise Software Architecture',
     description: 'Designing scalable, resilient, and high-performing software architectures tailored to your business needs.',
   },
@@ -65,3 +65,4 @@ export default function ServicesSection() {
     </section>
   );
 }
+
