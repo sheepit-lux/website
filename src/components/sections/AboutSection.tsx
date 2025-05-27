@@ -4,15 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Award, BrainCircuit, Users, Linkedin } from 'lucide-react';
 import sheepItOptimizedLogo from '@/app/images/SheepIT_optimized_logo.svg';
-import { Card } from '@/components/ui/card'; // Added Card import
+import { Card } from '@/components/ui/card'; 
 
 export default function AboutSection() {
-  const linkedInProfileUrl = "https://linkedin.com/in/yourprofile"; // Replace with your actual LinkedIn URL
+  const linkedInProfileUrl = "https://linkedin.com/in/yourprofile"; 
 
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-start"> {/* Changed items-center to items-start to better align varying height columns */}
+        <div className="grid md:grid-cols-2 gap-12 items-start"> 
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
               About SheepIT
@@ -63,9 +63,9 @@ export default function AboutSection() {
             </Button>
           </div>
           
-          <div className="flex flex-col gap-8"> {/* Container for logo and personal info, stacks them vertically */}
+          <div className="flex flex-col gap-8"> 
             {/* Logo Box */}
-            <Card className="p-8 flex justify-center items-center"> {/* Changed div to Card and removed redundant/overridden classes */}
+            <Card className="p-8 flex justify-center items-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"> 
               <Image 
                 src={sheepItOptimizedLogo} 
                 alt="SheepIT Company Logo" 
