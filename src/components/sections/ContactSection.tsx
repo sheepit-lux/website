@@ -1,6 +1,6 @@
 
 import ContactForm from '@/components/contact/ContactForm';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Building } from 'lucide-react';
 
 export default function ContactSection() {
   return (
@@ -41,8 +41,8 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-medium text-foreground">Call Us</h4>
-                <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                  +1 (234) 567-890 (Example)
+                <a href="tel:+352661629814" className="text-muted-foreground hover:text-primary transition-colors">
+                  +352 661 629 814
                 </a>
               </div>
             </div>
@@ -54,6 +54,19 @@ export default function ContactSection() {
                 <h4 className="font-medium text-foreground">Location</h4>
                 <p className="text-muted-foreground">
                   Remote First Company <br /> (Serving clients globally)
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="bg-primary/10 p-3 rounded-full">
+                <Building className="h-6 w-6 text-primary" /> {/* Using Building icon for office */}
+              </div>
+              <div>
+                <h4 className="font-medium text-foreground">Physical Office</h4>
+                <p className="text-muted-foreground">
+                  1 Rue de Holtz<br />
+                  L-8826 Perlé<br />
+                  Luxembourg
                 </p>
               </div>
             </div>
