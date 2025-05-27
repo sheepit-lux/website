@@ -2,9 +2,12 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Award, BrainCircuit, Users } from 'lucide-react';
+import { Award, BrainCircuit, Users, Linkedin } from 'lucide-react';
+import sheepItLogo from '@/app/images/Sheep_IT_logo.svg';
 
 export default function AboutSection() {
+  const linkedInProfileUrl = "https://linkedin.com/in/yourprofile"; // Replace with your actual LinkedIn URL
+
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,19 +61,36 @@ export default function AboutSection() {
               <Link href="#contact">Discuss Your Project</Link>
             </Button>
           </div>
-          <div className="relative h-80 md:h-[450px] rounded-lg overflow-hidden shadow-xl">
+          <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl group">
             <Image
-              src="https://placehold.co/600x450.png"
-              alt="Emmanuel Mouton or abstract tech background"
+              src="https://placehold.co/600x500.png" // Replace this with the path to your actual picture
+              alt="Emmanuel Mouton, Founder & Senior Software Architect"
               fill={true}
               style={{objectFit: 'cover'}}
-              data-ai-hint="professional office"
-              className="transform transition-transform duration-500 hover:scale-105"
+              data-ai-hint="portrait Emmanuel Mouton"
+              className="transform transition-transform duration-500 group-hover:scale-105"
             />
-             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-             <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold text-white">Emmanuel Mouton</h3>
-                <p className="text-md text-primary-foreground opacity-90">Founder & Senior Software Architect</p>
+             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+             <div className="absolute bottom-0 left-0 p-6 w-full">
+                <div className="flex items-start mb-3">
+                  <Image src={sheepItLogo} alt="SheepIT Logo" width={50} height={50} className="mr-3 flex-shrink-0 rounded-sm" />
+                  <div>
+                    <h3 className="text-2xl font-semibold text-white">Emmanuel Mouton</h3>
+                    <p className="text-md text-primary-foreground opacity-90">Founder & Senior Software Architect</p>
+                  </div>
+                </div>
+                {linkedInProfileUrl !== "https://linkedin.com/in/yourprofile" && (
+                  <Link
+                    href={linkedInProfileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm text-accent-foreground bg-accent/80 hover:bg-accent py-2 px-3 rounded-md transition-colors"
+                    aria-label="View Emmanuel Mouton's LinkedIn Profile"
+                  >
+                    <Linkedin className="h-4 w-4 mr-2" />
+                    View LinkedIn Profile
+                  </Link>
+                )}
              </div>
           </div>
         </div>
