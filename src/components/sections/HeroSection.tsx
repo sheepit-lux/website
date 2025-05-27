@@ -17,7 +17,7 @@ export default function HeroSection() {
           Crafting robust, scalable, and innovative software solutions for established companies and ambitious startups.
         </p>
         <div className="mt-10 flex justify-center space-x-4">
-          <Button size="lg" asChild variant="default" className="bg-white text-gradient-from hover:bg-gray-100">
+          <Button size="lg" asChild variant="default">
             <Link href="#contact">
               Get In Touch <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
