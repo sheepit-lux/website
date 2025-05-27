@@ -8,8 +8,7 @@ export default function Footer() {
     <footer className="border-t border-border/40 bg-background">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-10 sm:px-6 lg:px-8 md:flex-row md:py-12">
         <Link href="/" className="flex items-center gap-2" aria-label="SheepIT Home">
-          <Image src={sheepItLogo} alt="SheepIT Logo" width={28} height={28} className="h-7 w-7" />
-          {/* <span className="text-xl font-semibold text-foreground">SheepIT</span> Removed as logo likely includes text */}
+          <Image src={sheepItLogo} alt="SheepIT Logo" width={36} height={36} className="h-9 w-9" />
         </Link>
         <p className="text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} SheepIT. All rights reserved.
