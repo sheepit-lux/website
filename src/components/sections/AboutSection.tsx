@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Award, BrainCircuit, Users, Linkedin } from 'lucide-react';
-import sheepItLogo from '@/app/images/Sheep_IT_logo.svg';
+import sheepItOptimizedLogo from '@/app/images/SheepIT_optimized_logo.svg'; // Updated logo import
 
 export default function AboutSection() {
   const linkedInProfileUrl = "https://linkedin.com/in/yourprofile"; // Replace with your actual LinkedIn URL
@@ -66,7 +66,7 @@ export default function AboutSection() {
             {/* Logo Box */}
             <div className="bg-card p-8 rounded-lg shadow-xl flex justify-center items-center">
               <Image 
-                src={sheepItLogo} 
+                src={sheepItOptimizedLogo} 
                 alt="SheepIT Company Logo" 
                 width={200} 
                 height={200} 
