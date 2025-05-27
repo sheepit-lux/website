@@ -61,7 +61,7 @@ export default function ServicesSection() {
             We provide specialized services to help your business thrive in the digital landscape.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
