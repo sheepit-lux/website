@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -30,8 +31,8 @@ export default function Header() {
           <Image 
             src={sheepItOptimizedLogo} 
             alt="SheepIT Logo" 
-            width={75} 
-            height={75} 
+            width={50} 
+            height={50} 
             className="logo-themeable" 
           /> 
         </Link>
@@ -65,8 +66,8 @@ export default function Header() {
                   <Image 
                     src={sheepItOptimizedLogo} 
                     alt="SheepIT Logo" 
-                    width={60}
-                    height={60} 
+                    width={40}
+                    height={40} 
                     className="logo-themeable"
                   /> 
                 </Link>
