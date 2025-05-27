@@ -37,18 +37,16 @@ export default function AboutSection() {
             </Button>
           </div>
 
-          {/* Right Column: Logo Card */}
-          <div className="flex md:justify-center items-start pt-4 md:pt-0"> {/* Centering the card in its column */}
-            <Card className="p-8 flex justify-center items-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 max-w-sm md:max-w-md">
-              <Image
-                src={sheepItOptimizedLogo}
-                alt="SheepIT Company Logo"
-                width={200}
-                height={200}
-                className="h-auto w-auto max-h-[200px] max-w-[200px] logo-themeable"
-              />
-            </Card>
-          </div>
+          {/* Right Column: Logo Card - Now a direct grid item */}
+          <Card className="p-8 flex justify-center items-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full">
+            <Image
+              src={sheepItOptimizedLogo}
+              alt="SheepIT Company Logo"
+              width={250} 
+              height={250}
+              className="h-auto w-auto max-h-[250px] max-w-[250px] logo-themeable"
+            />
+          </Card>
         </div>
 
         {/* Second Row: Emmanuel Mouton Card (Centered) */}
@@ -68,18 +66,20 @@ export default function AboutSection() {
               <div className="flex-grow text-center md:text-left">
                 <h3 className="text-2xl font-semibold text-foreground mb-1">Emmanuel Mouton</h3>
                 <p className="text-md text-muted-foreground mb-4">Founder & Senior Software Architect</p>
-                <Button variant="link" asChild className="p-0 h-auto text-primary hover:text-primary/80">
-                  <Link
-                    href={linkedInProfileUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-sm font-medium"
-                    aria-label="View Emmanuel Mouton's LinkedIn Profile"
-                  >
-                    <Linkedin className="h-5 w-5 mr-2" />
-                    View LinkedIn Profile
-                  </Link>
-                </Button>
+                {linkedInProfileUrl && linkedInProfileUrl !== "https://linkedin.com/in/yourprofile" && (
+                  <Button variant="link" asChild className="p-0 h-auto text-primary hover:text-primary/80">
+                    <Link
+                      href={linkedInProfileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm font-medium"
+                      aria-label="View Emmanuel Mouton's LinkedIn Profile"
+                    >
+                      <Linkedin className="h-5 w-5 mr-2" />
+                      View LinkedIn Profile
+                    </Link>
+                  </Button>
+                )}
               </div>
             </div>
             
