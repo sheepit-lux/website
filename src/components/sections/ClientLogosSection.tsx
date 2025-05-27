@@ -8,7 +8,7 @@ interface ClientLogo {
 }
 
 const clientLogos: ClientLogo[] = [
-  { name: 'Expeto', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo company' },
+  { name: 'Expeto', logoSrc: '/expeto_optimized_logo.svg', aiHint: 'logo company' },
   { name: 'Tokeny Solutions', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo crypto blockchain' },
   // Add more client logos here if needed. For example:
   // { name: 'Another Client', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo tech' },
