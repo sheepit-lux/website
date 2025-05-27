@@ -68,7 +68,7 @@ export default function ContactSection() {
                 <Building className="h-6 w-6 text-primary" /> {/* Using Building icon for office */}
               </div>
               <div>
-                <h4 className="font-medium text-foreground">Physical Office</h4>
+                <h4 className="font-medium text-foreground">Office</h4>
                 <p className="text-muted-foreground">
                   1 Rue de Holtz<br />
                   L-8826 Perlé<br />
