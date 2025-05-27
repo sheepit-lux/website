@@ -13,45 +13,32 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* First Row: About Text and Logo Card */}
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Left Column: About SheepIT Text */}
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
-              About SheepIT
-            </h2>
-            <p className="text-lg text-muted-foreground mb-4">
-              SheepIT is an enterprise software development company founded by Emmanuel Mouton, a Senior Software Architect with over 16 years of hands-on experience in designing and building complex, scalable, and mission-critical systems.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              We specialize in translating intricate business requirements into robust technical solutions.
-            </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              Our approach is rooted in deep technical expertise, strategic thinking, and a commitment to long-term partnerships.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8">
-              We empower businesses to innovate and grow by leveraging cutting-edge technologies and best practices in software architecture.
-            </p>
-            <Button size="lg" asChild>
-              <Link href="#contact">Discuss Your Project</Link>
-            </Button>
-          </div>
-
-          {/* Right Column: Logo Card - Now a direct grid item */}
-          <Card className="p-8 flex justify-center items-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full">
-            <Image
-              src={sheepItOptimizedLogo}
-              alt="SheepIT Company Logo"
-              width={250} 
-              height={250}
-              className="h-auto w-auto max-h-[250px] max-w-[250px] logo-themeable"
-            />
-          </Card>
+        {/* Row 1: About SheepIT Text (Centered) */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
+            About SheepIT
+          </h2>
+          <p className="text-lg text-muted-foreground mb-4 max-w-3xl mx-auto">
+            SheepIT is an enterprise software development company founded by Emmanuel Mouton, a Senior Software Architect with over 16 years of hands-on experience in designing and building complex, scalable, and mission-critical systems.
+          </p>
+          <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
+            We specialize in translating intricate business requirements into robust technical solutions.
+          </p>
+          <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
+            Our approach is rooted in deep technical expertise, strategic thinking, and a commitment to long-term partnerships.
+          </p>
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            We empower businesses to innovate and grow by leveraging cutting-edge technologies and best practices in software architecture.
+          </p>
+          <Button size="lg" asChild>
+            <Link href="#contact">Discuss Your Project</Link>
+          </Button>
         </div>
 
-        {/* Second Row: Emmanuel Mouton Card (Centered) */}
-        <div className="mt-12 md:mt-16 flex justify-center">
-          <Card className="p-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-full md:max-w-2xl lg:max-w-3xl">
+        {/* Row 2: Emmanuel Mouton Card & Logo Card */}
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
+          {/* Left Column: Emmanuel Mouton Card */}
+          <Card className="p-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col h-full">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
               <div className="w-full md:w-auto md:flex-shrink-0">
                 <Image
@@ -83,7 +70,7 @@ export default function AboutSection() {
               </div>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-4 mt-auto"> {/* mt-auto to push expertise to bottom if card stretches */}
               <div className="flex items-start gap-3">
                 <div className="bg-primary/10 p-2 rounded-full mt-1">
                   <BrainCircuit className="h-5 w-5 text-primary" />
@@ -112,6 +99,17 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
+          </Card>
+
+          {/* Right Column: Logo Card */}
+          <Card className="p-8 flex justify-center items-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full">
+            <Image
+              src={sheepItOptimizedLogo}
+              alt="SheepIT Company Logo"
+              width={250} 
+              height={250}
+              className="h-auto w-auto max-h-[250px] max-w-[250px] logo-themeable"
+            />
           </Card>
         </div>
       </div>
