@@ -14,7 +14,7 @@ interface ClientLogo {
 
 const clientLogos: ClientLogo[] = [
   { name: 'Expeto', logoSrc: expetoLogo, aiHint: 'logo company', isSvg: true, href: 'https://www.expeto.io/' },
-  { name: 'Tokeny Solutions', logoSrc: tokenyLogo, aiHint: 'logo crypto blockchain', isSvg: true, href: 'https://tokeny.com/' },
+  { name: 'Tokeny', logoSrc: tokenyLogo, aiHint: 'logo crypto blockchain', isSvg: true, href: 'https://tokeny.com/' },
   // Add more client logos here if needed. For example:
   // { name: 'Another Client', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo tech' },
   // { name: 'Startup Inc.', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo startup' },
