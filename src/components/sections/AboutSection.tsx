@@ -5,15 +5,16 @@ import Link from 'next/link';
 import { Award, BrainCircuit, Users, Linkedin } from 'lucide-react';
 import sheepItOptimizedLogo from '@/app/images/SheepIT_optimized_logo.svg';
 import manumoutonAvatar from '@/app/images/manumouton_avatar.png';
-import { Card } from '@/components/ui/card'; 
+import { Card } from '@/components/ui/card';
 
 export default function AboutSection() {
-  const linkedInProfileUrl = "https://www.linkedin.com/in/manumouton/"; 
+  const linkedInProfileUrl = "https://www.linkedin.com/in/manumouton/";
 
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-start"> 
+        <div className="grid md:grid-cols-2 gap-12 md:items-stretch"> {/* Changed items-start to md:items-stretch */}
+          {/* Left Column */}
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
               About SheepIT
@@ -63,15 +64,16 @@ export default function AboutSection() {
               <Link href="#contact">Discuss Your Project</Link>
             </Button>
           </div>
-          
-          <div className="flex flex-col gap-8"> 
+
+          {/* Right Column */}
+          <div className="flex flex-col justify-between h-full gap-8"> {/* Added h-full and justify-between */}
             {/* Logo Box */}
-            <Card className="p-8 flex justify-center items-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"> 
-              <Image 
-                src={sheepItOptimizedLogo} 
-                alt="SheepIT Company Logo" 
-                width={200} 
-                height={200} 
+            <Card className="p-8 flex justify-center items-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <Image
+                src={sheepItOptimizedLogo}
+                alt="SheepIT Company Logo"
+                width={200}
+                height={200}
                 className="h-auto w-auto max-h-[200px] max-w-[200px] logo-themeable"
               />
             </Card>
