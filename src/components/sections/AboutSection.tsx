@@ -17,7 +17,13 @@ export default function AboutSection() {
               SheepIT is an enterprise software development company founded by Emmanuel Mouton, a Senior Software Architect with over 16 years of hands-on experience in designing and building complex, scalable, and mission-critical systems.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              We specialize in translating intricate business requirements into robust technical solutions. Our approach is rooted in deep technical expertise, strategic thinking, and a commitment to long-term partnerships. We empower businesses to innovate and grow by leveraging cutting-edge technologies and best practices in software architecture.
+              We specialize in translating intricate business requirements into robust technical solutions.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6">
+              Our approach is rooted in deep technical expertise, strategic thinking, and a commitment to long-term partnerships.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6">
+              We empower businesses to innovate and grow by leveraging cutting-edge technologies and best practices in software architecture.
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">

@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Server, Database, Code, Cloud, ShieldCheck, GitBranchPlus } from 'lucide-react';
+import { Server, Database, Code, Cloud, ShieldCheck, GitBranchPlus, CoffeeIcon, Coffee, Globe } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface TechExpertise {
@@ -10,12 +10,12 @@ interface TechExpertise {
 }
 
 const technologies: TechExpertise[] = [
-  { icon: Cloud, name: 'Cloud Platforms (AWS, Azure, GCP)', category: 'Infrastructure' },
-  { icon: Code, name: 'Modern Frameworks (React, Next.js, Node.js, .NET)', category: 'Development' },
-  { icon: GitBranchPlus, name: 'DevOps & CI/CD', category: 'Operations' },
-  { icon: Database, name: 'Database Technologies (SQL, NoSQL)', category: 'Data Management' },
-  { icon: ShieldCheck, name: 'Security Best Practices', category: 'Security' },
-  { icon: Server, name: 'Microservices & APIs', category: 'Architecture' },
+  { icon: Coffee, name: 'Enterprise Java Ecosystem', category: 'Java, Kotlin, Groovy, Scala, Spring Boot, Spring Framework, Hibernate, JOOQ' },
+  { icon: Server, name: 'Microservices & APIs', category: 'Domain-Driven Design, CQRS/Event Sourcing, REST APIs, Microservices, Enterprise Integration Patterns' },
+  { icon: Globe, name: 'Modern Web Technologies', category: 'TypeScript, JavaScript, Node.js, Angular, React, Progressive Web Apps' },
+  { icon: Cloud, name: 'Cloud & DevOps', category: 'AWS, Microsoft Azure, Docker, Kubernetes, Jenkins, GitLab CI/CD, Prometheus, Grafana' },
+  { icon: Database, name: 'Enterprise Databases', category: 'PostgreSQL, MongoDB, Oracle DB, Flyway migrations, Time-series processing' },
+  { icon: ShieldCheck, name: 'Security & Authentication', category: 'OAuth2, Spring Security, SAML/OIDC, Keycloak, Hashicorp Vault, SSL/TLS' },
 ];
 
 const TechCard = ({ icon: Icon, name, category }: TechExpertise) => (

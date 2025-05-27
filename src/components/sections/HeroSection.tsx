@@ -9,9 +9,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black opacity-20"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          <span className="block">Enterprise Software</span>
-          <span className="block">Architecture & Technical</span>
-          <span className="block text-primary-foreground opacity-90">Leadership</span>
+          <span className="block">Software Development</span>
+          <span className="block">Enterprise Architecture</span>
+          <span className="block text-primary-foreground opacity-90">Technical Leadership</span>
         </h1>
         <p className="mt-6 max-w-lg mx-auto text-lg text-primary-foreground opacity-80 sm:max-w-xl md:text-xl lg:text-2xl">
           Crafting robust, scalable, and innovative software solutions for established companies and ambitious startups.
@@ -22,7 +22,7 @@ export default function HeroSection() {
               Get In Touch <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gradient-to" asChild>
+          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" asChild>
              <Link href="#services">
               Our Services
             </Link>

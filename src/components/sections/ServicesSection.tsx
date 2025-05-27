@@ -18,12 +18,12 @@ const services: Service[] = [
   {
     icon: UsersRound,
     title: 'Technical Leadership & Consulting',
-    description: 'Providing expert guidance, team leadership, and strategic consulting to elevate your technical capabilities.',
+    description: 'Providing expert guidance, team leadership, and strategic consulting to elevate your team technical capabilities.',
   },
   {
     icon: Workflow,
     title: 'Process Automation & Integration',
-    description: 'Streamlining workflows and integrating disparate systems to enhance efficiency and productivity.',
+    description: 'Streamlining workflows and integrating disparate systems to enhance efficiency and productivity of your business.',
   },
   {
     icon: Globe,
