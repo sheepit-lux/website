@@ -4,10 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Award, BrainCircuit, Users, Linkedin } from 'lucide-react';
 import sheepItOptimizedLogo from '@/app/images/SheepIT_optimized_logo.svg';
+import manumoutonAvatar from '@/app/images/manumouton_avatar.png';
 import { Card } from '@/components/ui/card'; 
 
 export default function AboutSection() {
-  const linkedInProfileUrl = "https://linkedin.com/in/yourprofile"; 
+  const linkedInProfileUrl = "https://www.linkedin.com/in/manumouton/"; 
 
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/30">
@@ -71,38 +72,41 @@ export default function AboutSection() {
                 alt="SheepIT Company Logo" 
                 width={200} 
                 height={200} 
-                className="h-auto logo-themeable"
+                className="h-auto w-auto max-h-[200px] max-w-[200px] logo-themeable"
               />
             </Card>
 
-            {/* Personal Info Box */}
-            <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl group">
-              <Image
-                src="https://placehold.co/600x500.png" 
-                alt="Emmanuel Mouton, Founder & Senior Software Architect"
-                fill={true}
-                style={{objectFit: 'cover'}}
-                data-ai-hint="portrait Emmanuel Mouton"
-                className="transform transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-6 w-full">
-                  <h3 className="text-2xl font-semibold text-white">Emmanuel Mouton</h3>
-                  <p className="text-md text-primary-foreground opacity-90 mb-4">Founder & Senior Software Architect</p>
-                  {linkedInProfileUrl !== "https://linkedin.com/in/yourprofile" && (
+            {/* Personal Info Card */}
+            <Card className="p-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                <div className="w-full md:w-auto md:flex-shrink-0">
+                  <Image
+                    src={manumoutonAvatar}
+                    alt="Emmanuel Mouton, Founder & Senior Software Architect"
+                    width={160}
+                    height={160}
+                    className="rounded-lg shadow-md object-cover mx-auto md:mx-0"
+                    data-ai-hint="portrait Emmanuel Mouton"
+                  />
+                </div>
+                <div className="flex-grow text-center md:text-left">
+                  <h3 className="text-2xl font-semibold text-foreground mb-1">Emmanuel Mouton</h3>
+                  <p className="text-md text-muted-foreground mb-4">Founder & Senior Software Architect</p>
+                  <Button variant="link" asChild className="p-0 h-auto text-primary hover:text-primary/80">
                     <Link
                       href={linkedInProfileUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm text-accent-foreground bg-accent/90 hover:bg-accent py-2 px-4 rounded-md transition-colors shadow-md hover:shadow-lg"
+                      className="inline-flex items-center text-sm font-medium"
                       aria-label="View Emmanuel Mouton's LinkedIn Profile"
                     >
-                      <Linkedin className="h-4 w-4 mr-2" />
+                      <Linkedin className="h-5 w-5 mr-2" />
                       View LinkedIn Profile
                     </Link>
-                  )}
+                  </Button>
+                </div>
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </div>
