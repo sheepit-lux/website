@@ -8,7 +8,13 @@ export default function Footer() {
     <footer className="border-t border-border/40 bg-background">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-10 sm:px-6 lg:px-8 md:flex-row md:py-12">
         <Link href="/" className="flex items-center gap-2" aria-label="SheepIT Home">
-          <Image src={sheepItOptimizedLogo} alt="SheepIT Logo" width={60} height={60} className="h-[60px] w-[60px]" /> {/* Reduced logo size */}
+          <Image 
+            src={sheepItOptimizedLogo} 
+            alt="SheepIT Logo" 
+            width={60} 
+            height={60} 
+            className="h-[60px] w-[60px] logo-themeable" // Reduced logo size and added themeable class
+          />
         </Link>
         <p className="text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} SheepIT. All rights reserved.

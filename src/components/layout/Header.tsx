@@ -28,7 +28,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8"> {/* Adjusted header height */}
         <Link href="/" className="flex items-center gap-2" aria-label="SheepIT Home">
-          <Image src={sheepItOptimizedLogo} alt="SheepIT Logo" width={75} height={75} className="h-[75px] w-[75px]" /> {/* Reduced logo size */}
+          <Image 
+            src={sheepItOptimizedLogo} 
+            alt="SheepIT Logo" 
+            width={75} 
+            height={75} 
+            className="h-[75px] w-[75px] logo-themeable" // Reduced logo size and added themeable class
+          /> 
         </Link>
         
         <nav className="hidden md:flex items-center space-x-6">
@@ -57,7 +63,13 @@ export default function Header() {
             <SheetContent side="right" className="w-[280px] sm:w-[320px]">
               <div className="p-6">
                 <Link href="/" className="flex items-center gap-2 mb-8" onClick={handleLinkClick} aria-label="SheepIT Home">
-                  <Image src={sheepItOptimizedLogo} alt="SheepIT Logo" width={60} height={60} className="h-[60px] w-[60px]" /> {/* Reduced logo size in mobile menu */}
+                  <Image 
+                    src={sheepItOptimizedLogo} 
+                    alt="SheepIT Logo" 
+                    width={60} // Adjusted mobile menu logo size if needed, keeping it reasonable
+                    height={60} 
+                    className="h-[60px] w-[60px] logo-themeable" // Reduced logo size in mobile menu and added themeable class
+                  /> 
                 </Link>
                 <nav className="flex flex-col space-y-4">
                   {navItems.map((item) => (

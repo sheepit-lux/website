@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Award, BrainCircuit, Users, Linkedin } from 'lucide-react';
-import sheepItOptimizedLogo from '@/app/images/SheepIT_optimized_logo.svg'; // Updated logo import
+import sheepItOptimizedLogo from '@/app/images/SheepIT_optimized_logo.svg';
 
 export default function AboutSection() {
   const linkedInProfileUrl = "https://linkedin.com/in/yourprofile"; // Replace with your actual LinkedIn URL
@@ -70,7 +70,7 @@ export default function AboutSection() {
                 alt="SheepIT Company Logo" 
                 width={200} 
                 height={200} 
-                className="h-auto" // Allow SVG to scale height based on width
+                className="h-auto logo-themeable" // Allow SVG to scale height based on width and added themeable class
               />
             </div>
 
