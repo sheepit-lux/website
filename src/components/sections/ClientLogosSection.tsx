@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link'; // Added Link import
 import expetoLogo from '@/app/images/expeto_optimized_logo.svg'; 
+import tokenyLogo from '@/app/images/tokeny_optimized_logo.svg';
 
 interface ClientLogo {
   name: string;
@@ -13,7 +14,7 @@ interface ClientLogo {
 
 const clientLogos: ClientLogo[] = [
   { name: 'Expeto', logoSrc: expetoLogo, aiHint: 'logo company', isSvg: true, href: 'https://www.expeto.io/' },
-  { name: 'Tokeny Solutions', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo crypto blockchain' },
+  { name: 'Tokeny Solutions', logoSrc: tokenyLogo, aiHint: 'logo crypto blockchain', isSvg: true, href: 'https://tokeny.com/' },
   // Add more client logos here if needed. For example:
   // { name: 'Another Client', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo tech' },
   // { name: 'Startup Inc.', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo startup' },
