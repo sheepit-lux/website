@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-import AppProviders from '@/components/AppProviders'; // For AI Chat (Genkit)
 
 const inter = Inter({
   subsets: ['latin'],
@@ -23,10 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <AppProviders>
-          {children}
-          <Toaster />
-        </AppProviders>
+        {children}
+        <Toaster />
       </body>
     </html>
   );

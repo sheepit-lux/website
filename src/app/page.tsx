@@ -7,7 +7,6 @@ import AboutSection from '@/components/sections/AboutSection';
 import ClientLogosSection from '@/components/sections/ClientLogosSection';
 import TechnologyShowcaseSection from '@/components/sections/TechnologyShowcaseSection';
 import ContactSection from '@/components/sections/ContactSection';
-import AIChatButton from '@/components/ai/AIChatButton';
 
 export default function Home() {
   return (
@@ -22,7 +21,6 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
-      <AIChatButton />
     </div>
   );
 }
