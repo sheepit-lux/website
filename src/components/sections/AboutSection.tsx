@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Award, BrainCircuit, Users, Linkedin } from 'lucide-react';
 import sheepItOptimizedLogo from '@/app/images/SheepIT_optimized_logo.svg';
+import { Card } from '@/components/ui/card'; // Added Card import
 
 export default function AboutSection() {
   const linkedInProfileUrl = "https://linkedin.com/in/yourprofile"; // Replace with your actual LinkedIn URL
@@ -64,20 +65,20 @@ export default function AboutSection() {
           
           <div className="flex flex-col gap-8"> {/* Container for logo and personal info, stacks them vertically */}
             {/* Logo Box */}
-            <div className="bg-card p-8 rounded-lg shadow-xl flex justify-center items-center">
+            <Card className="p-8 flex justify-center items-center"> {/* Changed div to Card and removed redundant/overridden classes */}
               <Image 
                 src={sheepItOptimizedLogo} 
                 alt="SheepIT Company Logo" 
                 width={200} 
                 height={200} 
-                className="h-auto logo-themeable" // Allow SVG to scale height based on width and added themeable class
+                className="h-auto logo-themeable"
               />
-            </div>
+            </Card>
 
             {/* Personal Info Box */}
             <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl group">
               <Image
-                src="https://placehold.co/600x500.png" // Replace this with the path to your actual picture
+                src="https://placehold.co/600x500.png" 
                 alt="Emmanuel Mouton, Founder & Senior Software Architect"
                 fill={true}
                 style={{objectFit: 'cover'}}
