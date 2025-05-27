@@ -11,7 +11,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start"> {/* Changed items-center to items-start to better align varying height columns */}
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
               About SheepIT
@@ -61,37 +61,47 @@ export default function AboutSection() {
               <Link href="#contact">Discuss Your Project</Link>
             </Button>
           </div>
-          <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl group">
-            <Image
-              src="https://placehold.co/600x500.png" // Replace this with the path to your actual picture
-              alt="Emmanuel Mouton, Founder & Senior Software Architect"
-              fill={true}
-              style={{objectFit: 'cover'}}
-              data-ai-hint="portrait Emmanuel Mouton"
-              className="transform transition-transform duration-500 group-hover:scale-105"
-            />
-             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
-             <div className="absolute bottom-0 left-0 p-6 w-full">
-                <div className="flex items-start mb-3">
-                  <Image src={sheepItLogo} alt="SheepIT Logo" width={50} height={50} className="mr-3 flex-shrink-0 rounded-sm" />
-                  <div>
-                    <h3 className="text-2xl font-semibold text-white">Emmanuel Mouton</h3>
-                    <p className="text-md text-primary-foreground opacity-90">Founder & Senior Software Architect</p>
-                  </div>
-                </div>
-                {linkedInProfileUrl !== "https://linkedin.com/in/yourprofile" && (
-                  <Link
-                    href={linkedInProfileUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-sm text-accent-foreground bg-accent/80 hover:bg-accent py-2 px-3 rounded-md transition-colors"
-                    aria-label="View Emmanuel Mouton's LinkedIn Profile"
-                  >
-                    <Linkedin className="h-4 w-4 mr-2" />
-                    View LinkedIn Profile
-                  </Link>
-                )}
-             </div>
+          
+          <div className="flex flex-col gap-8"> {/* Container for logo and personal info, stacks them vertically */}
+            {/* Logo Box */}
+            <div className="bg-card p-8 rounded-lg shadow-xl flex justify-center items-center">
+              <Image 
+                src={sheepItLogo} 
+                alt="SheepIT Company Logo" 
+                width={200} 
+                height={200} 
+                className="h-auto" // Allow SVG to scale height based on width
+              />
+            </div>
+
+            {/* Personal Info Box */}
+            <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl group">
+              <Image
+                src="https://placehold.co/600x500.png" // Replace this with the path to your actual picture
+                alt="Emmanuel Mouton, Founder & Senior Software Architect"
+                fill={true}
+                style={{objectFit: 'cover'}}
+                data-ai-hint="portrait Emmanuel Mouton"
+                className="transform transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-6 w-full">
+                  <h3 className="text-2xl font-semibold text-white">Emmanuel Mouton</h3>
+                  <p className="text-md text-primary-foreground opacity-90 mb-4">Founder & Senior Software Architect</p>
+                  {linkedInProfileUrl !== "https://linkedin.com/in/yourprofile" && (
+                    <Link
+                      href={linkedInProfileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm text-accent-foreground bg-accent/90 hover:bg-accent py-2 px-4 rounded-md transition-colors shadow-md hover:shadow-lg"
+                      aria-label="View Emmanuel Mouton's LinkedIn Profile"
+                    >
+                      <Linkedin className="h-4 w-4 mr-2" />
+                      View LinkedIn Profile
+                    </Link>
+                  )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
