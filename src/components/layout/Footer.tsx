@@ -11,9 +11,9 @@ export default function Footer() {
           <Image 
             src={sheepItOptimizedLogo} 
             alt="SheepIT Logo" 
-            width={60} 
-            height={60} 
-            className="h-[60px] w-[60px] logo-themeable" // Reduced logo size and added themeable class
+            width={37} 
+            height={37} 
+            className="logo-themeable" 
           />
         </Link>
         <p className="text-sm text-muted-foreground">
