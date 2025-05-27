@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Building2, UsersRound, Workflow, Globe } from 'lucide-react';
+import { Building2, UsersRound, Workflow, Globe, Code } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface Service {
@@ -30,6 +30,11 @@ const services: Service[] = [
     title: 'Enterprise Web Solutions',
     description: 'Developing robust and modern web applications, platforms, and APIs for complex business requirements.',
   },
+  {
+    icon: Code,
+    title: 'Custom Software Development',
+    description: 'Building tailor-made software solutions from scratch to meet your unique business and operational requirements.',
+  },
 ];
 
 const ServiceCard = ({ icon: Icon, title, description }: Service) => (
@@ -56,7 +61,7 @@ export default function ServicesSection() {
             We provide specialized services to help your business thrive in the digital landscape.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
@@ -65,4 +70,3 @@ export default function ServicesSection() {
     </section>
   );
 }
-
