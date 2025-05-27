@@ -1,14 +1,16 @@
 
 import Image from 'next/image';
+import expetoLogo from '@/app/images/expeto_optimized_logo.svg'; // Import the Expeto logo
 
 interface ClientLogo {
   name: string;
-  logoSrc: string;
+  logoSrc: string | any; // Can be string (URL) or StaticImageData (imported image)
   aiHint: string;
+  isSvg?: boolean; // Flag to identify if the logo is an imported SVG
 }
 
 const clientLogos: ClientLogo[] = [
-  { name: 'Expeto', logoSrc: '/expeto_optimized_logo.svg', aiHint: 'logo company' },
+  { name: 'Expeto', logoSrc: expetoLogo, aiHint: 'logo company', isSvg: true },
   { name: 'Tokeny Solutions', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo crypto blockchain' },
   // Add more client logos here if needed. For example:
   // { name: 'Another Client', logoSrc: 'https://placehold.co/200x80.png', aiHint: 'logo tech' },
@@ -30,7 +32,7 @@ export default function ClientLogosSection() {
                 alt={`${client.name} logo`}
                 width={160}
                 height={64}
-                className="opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+                className={`opacity-60 group-hover:opacity-100 transition-opacity duration-300 ${client.isSvg ? 'logo-themeable' : ''}`}
                 data-ai-hint={client.aiHint}
               />
                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
