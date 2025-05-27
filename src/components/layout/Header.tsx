@@ -2,9 +2,10 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Network } from 'lucide-react'; // Changed Sheep to Network
+import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
 const navItems = [
@@ -26,7 +27,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" aria-label="SheepIT Home">
-          <Network className="h-8 w-8 text-primary" /> {/* Changed Sheep to Network */}
+          <Image src="/images/Sheep_IT_logo.svg" alt="SheepIT Logo" width={32} height={32} className="h-8 w-8" />
           <span className="text-2xl font-bold text-foreground">SheepIT</span>
         </Link>
         
@@ -56,7 +57,7 @@ export default function Header() {
             <SheetContent side="right" className="w-[280px] sm:w-[320px]">
               <div className="p-6">
                 <Link href="/" className="flex items-center gap-2 mb-8" onClick={handleLinkClick} aria-label="SheepIT Home">
-                  <Network className="h-8 w-8 text-primary" /> {/* Changed Sheep to Network */}
+                  <Image src="/images/Sheep_IT_logo.svg" alt="SheepIT Logo" width={32} height={32} className="h-8 w-8" />
                   <span className="text-2xl font-bold text-foreground">SheepIT</span>
                 </Link>
                 <nav className="flex flex-col space-y-4">
