@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Award, BrainCircuit, Users, Linkedin } from 'lucide-react';
 import sheepItOptimizedLogo from '@/app/images/SheepIT_optimized_logo.svg';
 import manumoutonAvatar from '@/app/images/manumouton_avatar.png';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function AboutSection() {
   const linkedInProfileUrl = "https://www.linkedin.com/in/manumouton/";
@@ -13,7 +13,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 md:items-stretch"> {/* Changed items-start to md:items-stretch */}
+        <div className="grid md:grid-cols-2 gap-12 md:items-stretch">
           {/* Left Column */}
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
@@ -28,45 +28,16 @@ export default function AboutSection() {
             <p className="text-lg text-muted-foreground mb-6">
               Our approach is rooted in deep technical expertise, strategic thinking, and a commitment to long-term partnerships.
             </p>
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-lg text-muted-foreground mb-8"> {/* Added more bottom margin */}
               We empower businesses to innovate and grow by leveraging cutting-edge technologies and best practices in software architecture.
             </p>
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start gap-3">
-                <div className="bg-primary/10 p-2 rounded-full mt-1">
-                  <BrainCircuit className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Deep Expertise</h3>
-                  <p className="text-muted-foreground text-sm">Architecting solutions for complex enterprise challenges.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="bg-primary/10 p-2 rounded-full mt-1">
-                  <Award className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">16+ Years Experience</h3>
-                  <p className="text-muted-foreground text-sm">Proven track record in technical leadership and software design.</p>
-                </div>
-              </div>
-               <div className="flex items-start gap-3">
-                <div className="bg-primary/10 p-2 rounded-full mt-1">
-                  <Users className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Client-Focused</h3>
-                  <p className="text-muted-foreground text-sm">Building long-term partnerships for sustained success.</p>
-                </div>
-              </div>
-            </div>
             <Button size="lg" asChild>
               <Link href="#contact">Discuss Your Project</Link>
             </Button>
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col justify-between h-full gap-8"> {/* Added h-full and justify-between */}
+          <div className="flex flex-col justify-between h-full gap-8">
             {/* Logo Box */}
             <Card className="p-8 flex justify-center items-center transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <Image
@@ -78,9 +49,9 @@ export default function AboutSection() {
               />
             </Card>
 
-            {/* Personal Info Card */}
+            {/* Personal Info Card with Expertise */}
             <Card className="p-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
                 <div className="w-full md:w-auto md:flex-shrink-0">
                   <Image
                     src={manumoutonAvatar}
@@ -106,6 +77,36 @@ export default function AboutSection() {
                       View LinkedIn Profile
                     </Link>
                   </Button>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="bg-primary/10 p-2 rounded-full mt-1">
+                    <BrainCircuit className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Deep Expertise</h4>
+                    <p className="text-muted-foreground text-sm">Architecting solutions for complex enterprise challenges.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="bg-primary/10 p-2 rounded-full mt-1">
+                    <Award className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">16+ Years Experience</h4>
+                    <p className="text-muted-foreground text-sm">Proven track record in technical leadership and software design.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="bg-primary/10 p-2 rounded-full mt-1">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Client-Focused</h4>
+                    <p className="text-muted-foreground text-sm">Building long-term partnerships for sustained success.</p>
+                  </div>
                 </div>
               </div>
             </Card>
