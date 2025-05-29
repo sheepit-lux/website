@@ -36,7 +36,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h4 className="font-medium text-foreground">Email Us</h4>
-                <a href="mailto:info@sheepit.com" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:contact@sheepit.eu" className="text-muted-foreground hover:text-primary transition-colors">
                   contact@sheepit.eu
                 </a>
               </div>
