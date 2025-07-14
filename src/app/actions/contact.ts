@@ -24,17 +24,29 @@ export async function submitContactForm(values: ContactFormValues): Promise<Acti
     return { success: false, error: "Invalid form data. Please check your inputs." };
   }
 
-  // In a real application, you would send an email, save to a database, etc.
-  // For this example, we'll just log the data.
-  console.log("Contact form submitted:", values);
+  const webhookUrl = "https://hook.eu2.make.com/l7vsyltb6gd3qtx2cpu6i7gtsjrgou3c";
 
-  // Simulate network delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  try {
+    const response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    });
 
-  // Simulate a potential error (e.g., 10% chance of failure)
-  // if (Math.random() < 0.1) {
-  //   return { success: false, error: "Simulated server error. Please try again." };
-  // }
+    if (!response.ok) {
+      // The webhook might return a non-2xx status code on error.
+      const errorBody = await response.text();
+      console.error("Webhook submission failed:", response.status, errorBody);
+      return { success: false, error: "Failed to submit your message. Please try again later." };
+    }
 
-  return { success: true };
+    console.log("Contact form successfully submitted to webhook:", values);
+    return { success: true };
+
+  } catch (error) {
+    console.error("An unexpected error occurred during webhook submission:", error);
+    return { success: false, error: "An unexpected error occurred. Please try again." };
+  }
 }
