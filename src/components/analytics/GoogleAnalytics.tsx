@@ -1,26 +1,13 @@
 
 'use client';
 
-import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
-import { useEffect } from 'react';
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export default function GoogleAnalytics() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    if (!GA_MEASUREMENT_ID) return;
-
-    const url = pathname + searchParams.toString();
-
-    window.gtag('config', GA_MEASUREMENT_ID, {
-      page_path: url,
-    });
-  }, [pathname, searchParams]);
-
+  // If the measurement ID is not set, don't render anything.
+  // This is also a safeguard against running analytics in a development environment if the variable isn't set.
   if (!GA_MEASUREMENT_ID) {
     return null;
   }
@@ -39,9 +26,7 @@ export default function GoogleAnalytics() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', '${GA_MEASUREMENT_ID}');
           `,
         }}
       />
