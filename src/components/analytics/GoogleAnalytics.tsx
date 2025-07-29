@@ -3,15 +3,9 @@
 
 import Script from 'next/script';
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GA_MEASUREMENT_ID = 'G-4MVNC68RBS';
 
 export default function GoogleAnalytics() {
-  // If the measurement ID is not set, don't render anything.
-  // This is also a safeguard against running analytics in a development environment if the variable isn't set.
-  if (!GA_MEASUREMENT_ID) {
-    return null;
-  }
-
   return (
     <>
       <Script
